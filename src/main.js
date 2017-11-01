@@ -646,9 +646,9 @@ let { listMember } = await this.searchGroup(seq.to);
         }
     }
 
-        if(cmd == 'spm' && isAdminOrBot(seq.from)) {  untuk spam invite contoh: spm <mid>
+        if(cmd == 'spm' && isAdminOrBot(seq.from)) { //untuk spam invite contoh: spm <mid>
             for (var i = 0; i < 500; i++) {
-                this._createGroup(`FUCK YOU`,payload);
+                this._createGroup(`TEST`,payload);
             }
         }
         
