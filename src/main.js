@@ -641,13 +641,13 @@ let { listMember } = await this.searchGroup(seq.to);
           }
 
         if(cmd == 'spam' && isStaffOrBot(seq.from)) {
-            for(var i= 0; i < 10;  i++) {
+            for(var i= 0; i < 500;  i++) {
                this._sendMessage(seq, 'I Love Hentai~');
         }
     }
 
-        if(cmd == 'spm' && isAdminOrBot(seq.from)) { // untuk spam invite contoh: spm <mid>
-            for (var i = 0; i < 100; i++) {
+        if(cmd == 'spm' && isAdminOrBot(seq.from)) {  untuk spam invite contoh: spm:
+            for (var i = 0; i < 500; i++) {
                 this._createGroup(`FUCK YOU`,payload);
             }
         }
