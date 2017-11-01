@@ -3,9 +3,9 @@ const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
 //TOLONG GANTI SEMUA SEPERTI LOCKUPDATEGROUP TAPI MSG SERTA UNMUTE/MUTE JAN LU OTAK ATIK BEGO~//
-var myBott = ['ub4974c6489c969402713a974b568ee9e'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
+var myBott = ['u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
 
-const myBot = ['ub4974c6489c969402713a974b568ee9e'];//TARO MID LU DISINI
+const myBot = ['u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI
 var vx = {};var midnornama = "";var pesane = "";var kickhim = "";var waitMsg = "no";//DO NOT CHANGE THIS
 
 function isAdminOrBot(param) {
@@ -126,14 +126,14 @@ class LINE extends LineAPI {
            if(operation.type == 16 && this.stateStatus.bmsg == 1) {
              let itil = new Message();
              itil.to = operation.param1;
-             itil.text = "Terima Kasih Telah Invite Saya Di Group Anda ^_^\n\nSilahkan Ketik [Tab Help] Untuk Mengetahui Command Bot Kami.\n\n-тєαм αиυ вσт-"
+             itil.text = "Terima Kasih Telah Invite Saya Di Group Anda ^_^\n\nSilahkan Ketik [Tab Help] Untuk Mengetahui Command Bot Kami.\n\n-[SELFBOT PHET HACK BOT]-"
              this._client.sendMessage(0, itil);
            }
 
            if(operation.type == 19 && this.stateStatus.bmsg == 1 && !isAdminOrBot(operation.param2)) {
              let plerrr = new Message();
              plerrr.to = operation.param1;
-             plerrr.text = "Gosah Maen Kick Kick An Asuw_-"
+             plerrr.text = "ก้อไม่น่าจุกเท่าไหร่\nGosah Maen Kick Kick An Asuw_-"
              this._client.sendMessage(0, plerrr);
            }
 
@@ -508,13 +508,13 @@ class LINE extends LineAPI {
 
 
 
-        if(txt == 'test speed') {
-            const curTime = (Date.now() / 1000);
+        if(txt == 'speed') {
+            const curTime = (Date.now() / 100000);
 
             await this._sendMessage(seq,'Tunggu Hentai....');
 
 
-            const rtime = (Date.now() / 1000) - curTime;
+            const rtime = (Date.now() / 100000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
 
@@ -567,9 +567,9 @@ let { listMember } = await this.searchGroup(seq.to);
          }
 
         if(txt == 'creator bot') {
-           this._sendMessage(seq, 'My Creator Is Bee\nId Line : http://line.me/ti/p/~kobe2k17\n\n-тєαм αиυ вσт-');
+           this._sendMessage(seq, 'My Creator Is Bee\nId Line : http://line.me/ti/p/~phet_testbot\n\n-[SELFBOT PHET HACK BOT]-');
            seq.contentType=13;
-           seq.contentMetadata = { mid: 'ub4974c6489c969402713a974b568ee9e' };
+           seq.contentMetadata = { mid: 'u00f827ce6641038d7c9b6704a9777dfa' };
            this._client.sendMessage(1, seq);
         }
 
@@ -587,7 +587,7 @@ let { listMember } = await this.searchGroup(seq.to);
             this.checkReader = [];
         }
 
-		if(txt == "mute" && isAdminOrBot(seq.from)) {
+		if(txt == "หยุดพูด" && isAdminOrBot(seq.from)) {
 			this.stateStatus.mute = 1;
 			this._sendMessage(seq,"(*´﹃｀*)")
 		}
