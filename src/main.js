@@ -509,12 +509,12 @@ class LINE extends LineAPI {
 
 
         if(txt == 'sp') {
-            const curTime = (Date.now() / 1000);
+            const curTime = (Date.now() / 100000);
 
             await this._sendMessage(seq,'Please wait..');
 
 
-            const rtime = (Date.now() / 1000) - curTime;
+            const rtime = (Date.now() / 100000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
 
