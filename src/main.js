@@ -119,14 +119,14 @@ class LINE extends LineAPI {
 
                let kam = new Message();
                kam.to = operation.param1;
-               kam.text = "Selamat Datang, Jangan Lupa Berbaur Yah ^_^"
+               kam.text = "[ยินดีต้อนรับจร้า]\n\n[By.เพชรทีมทดลองบอท]"
                this._client.sendMessage(0, kam);
              }
 
            if(operation.type == 16 && this.stateStatus.bmsg == 1) {
              let itil = new Message();
              itil.to = operation.param1;
-             itil.text = "Terima Kasih Telah Invite Saya Di Group Anda ^_^\n\nSilahkan Ketik [Tab Help] Untuk Mengetahui Command Bot Kami.\n\n-[SELFBOT PHET HSCK BOT-"
+             itil.text = "[SELFBOT PHET HACK BOT]\n\nSilahkan Ketik [Help] Untuk Mengetahui Command Bot Kami.\n\n-[SELFBOT PHET HSCK BOT-"
              this._client.sendMessage(0, itil);
            }
 
@@ -453,18 +453,18 @@ class LINE extends LineAPI {
     }
 }
 
-        if(txt == 'group') {
+        if(txt == 'ginfo') {
            this._sendMessage(seq, 'Nama Group :\n'+ginfo.name+'\n\nGroup ID :\n'+ginfo.id+'\n\nPembuat Group :\n'+ginfo.creator.displayName);
          }
 
-        if(txt == 'response name') {
+        if(txt == 'บอท') {
            if(isAdminOrBot(seq.from) || isStaffOrBot(seq.from)) {
-            this._sendMessage(seq, 'TAB 1 Hadir 􀂳');
+            this._sendMessage(seq, 'ยังอยู่..ยังไม่ตาย..');
            }
         }
 
-        if(txt == 'help') {
-           this._sendMessage(seq, '==============================\n[SELFBOTPHETHACKBOT\n==============================\n☞ Myid\n☞ Tab Gift\n☞ Halo\n☞ TAB Help\n☞ Creator Bot\n☞ Bc [Jumlah] /[Text] (Jika Bc On)\n☞ TAB:InfoGroup\n☞ Group Creator\n☞ Tag\n☞ Test Speed\n☞ Baca Read\n☞ Lihat Pembacaan Read\n☞ Status/Setting\n☞ Hapus Pembacaan Read\n☞ Hak Admin Dan Staff\n\n==============================\nPHET HACK BOT GROUP\n==============================\n☞ Response Name\n☞ Open Url\n☞ Close Url\n☞ TAB Bye\n☞ spam\n☞ Kick On/Off\n☞ Cancel On/Off\n☞ LockInvite On/Off\n☞ LockUpdateGroup On/Off\n☞ LockJoin On/Off\n☞ LockCancel On/Off\n☞ Nk「@」\n☞ Kickall (Kick On Terlebih Dahulu)\n☞ Msg\n☞ Bc On/Off\n☞ Bmsg On/Off\n\n==============================\nPHET HACK BOT ABMIN\n==============================\n☞ Mute\n☞ Unmute\n☞ Tab:add:staff\n☞ Tab:del:staff\n\n==============================฿Ɏ ₮Ɇ₳₥ ₳₦Ʉ ฿Ø₮\n==============================');
+        if(txt == '/help') {
+           this._sendMessage(seq, '==============================\n[SELFBOTPHETHACKBOT\n==============================\n☞ Myid\n☞ Tab Gift\n☞ Halo\n☞ TAB Help\n☞ Creator Bot\n☞ Bc [Jumlah] /[Text] (Jika Bc On)\n☞ TAB:InfoGroup\n☞ Group Creator\n☞ Tag\n☞ Test Speed\n☞ Baca Read\n☞ Lihat Pembacaan Read\n☞ Status/Setting\n☞ Hapus Pembacaan Read\n☞ Hak Admin Dan Staff\n\n==============================\nPHET HACK BOT GROUP\n==============================\n☞ Response Name\n☞ Open Url\n☞ Close Url\n☞ TAB Bye\n☞ spam\n☞ Kick On/Off\n☞ Cancel On/Off\n☞ LockInvite On/Off\n☞ LockUpdateGroup On/Off\n☞ LockJoin On/Off\n☞ LockCancel On/Off\n☞ Nk「@」\n☞ Kickall (Kick On Terlebih Dahulu)\n☞ Msg\n☞ Bc On/Off\n☞ Bmsg On/Off\n\n==============================\nPHET HACK BOT ABMIN\n==============================\n☞ Mute\n☞ Unmute\n☞ Tab:add:staff\n☞ Tab:del:staff\n\n============================');
         }
 
          if(txt == 'hak admin dan staff' || txt == 'hak staff dan admin') {
@@ -475,7 +475,7 @@ class LINE extends LineAPI {
             this._sendMessage(seq,`Status: \n${JSON.stringify(this.stateStatus)}\n\n*Note: Jika Status Menunjukkan 0 Itu Berarti Off Dan Jika Status Menunjukkan 1 Itu Berarti On.\n\n-тєαм αиυ вσт-`);
           }
 
-		if(txt == "setting"){
+		if(txt == "/set"){
 			this.setState(seq,1)
 		}
 
@@ -483,14 +483,14 @@ class LINE extends LineAPI {
             //this._sendMessage(seq, 'This Is My Admin :\n\n(1.) Negan\nId Line : http://line.me/ti/p/~pasukan_bangsat\n\n(2.) Erin\nId Line : http://line.me/ti/p/~guetuhlupa\n\n(3.) Mia\nId Line : http://line.me/ti/p/~hmrh_may\n\n-тєαм αиυ вσт-');
         //}
 
-        if(txt == 'gift') {
+        if(txt == 'hmmm') {
 
            seq.contentType = 7
            seq.contentMetadata = {'STKID':'404','STKPKGID':'1','STKVER':'100'};
            this._client.sendMessage(3, seq);
           }
 
-          if(txt == 'gifta') {
+          if(txt == 'gift') {
              seq.contentType = 9
              seq.contentMetadata = {'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58','PRDTYPE': 'THEME','MSGTPL': '5'};
              this._client.sendMessage(1, seq);
@@ -498,7 +498,7 @@ class LINE extends LineAPI {
 
         if(txt == 'halo') {
           if(isAdminOrBot(seq.from) || isStaffOrBot(seq.from)) {
-        this._sendMessage(seq, 'Halo Juga Admin Atau Staff TAB');
+        this._sendMessage(seq, 'Hello Juga Admin Atau Staff\n\nPHET HACK BOT');
         }
       else
         {
@@ -508,7 +508,7 @@ class LINE extends LineAPI {
 
 
 
-        if(txt == 'sp') {
+        if(txt == 'speed') {
             const curTime = (Date.now() / 100000);
 
             await this._sendMessage(seq,'Please wait..');
@@ -539,19 +539,19 @@ let { listMember } = await this.searchGroup(seq.to);
             }
         }
 
-        if(txt == 'baca read') {
+        if(txt == 'rebootred') {
             this._sendMessage(seq, `Pembacaan Read Dimulai Dari Sekarang.`);
             this.removeReaderByGroup(seq.to);
         }
 
-        if(txt == 'hapus pembacaan read') {
+        if(txt == 'ตั้งเวลา') {
 
             this.checkReader = []
             this._sendMessage(seq, `Menghapus Data Pembacaan Read`);
         }  
 
 
-        if(txt == 'lihat pembacaan read'){
+        if(txt == 'อ่าน'){
             let rec = await this.recheck(this.checkReader,seq.to);
             const mentions = await this.mention(rec);
             seq.contentMetadata = mentions.cmddata;
@@ -559,7 +559,7 @@ let { listMember } = await this.searchGroup(seq.to);
             
         }
 
-         if (txt == 'wcgroup') {
+         if (txt == 'wcginfo') {
              let gcreator = await this._getGroup(seq.to);
              seq.contentType = 13;
              seq.contentMetadata = {mid: gcreator.creator.mid, displayName: gcreator.creator.displayName};
@@ -567,7 +567,7 @@ let { listMember } = await this.searchGroup(seq.to);
          }
 
         if(txt == 'me') {
-           this._sendMessage(seq,'Contact abmin');
+           this._sendMessage(seq,'Contact');
            seq.contentType=13;
            seq.contentMetadata = { mid: 'u00f827ce6641038d7c9b6704a9777dfa' };
            this._client.sendMessage(1, seq);
