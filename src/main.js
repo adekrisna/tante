@@ -3,9 +3,9 @@ const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
 //TOLONG GANTI SEMUA SEPERTI LOCKUPDATEGROUP TAPI MSG SERTA UNMUTE/MUTE JAN LU OTAK ATIK BEGO~//
-var myBott = ['u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
+var myBott = ['ue6a2f69d39abe0d80d31aa9722d6a135','u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
 
-const myBot = ['u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI
+const myBot = ['ue6a2f69d39abe0d80d31aa9722d6a135','u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI
 var vx = {};var midnornama = "";var pesane = "";var kickhim = "";var waitMsg = "no";//DO NOT CHANGE THIS
 
 function isAdminOrBot(param) {
@@ -111,7 +111,7 @@ class LINE extends LineAPI {
              let out = new Message();
              out.to = operation.param1;
 
-             out.text = "[โชคดีนะครับเเล้วพบกันใหม่]\n\n[By.เพชร ทีมทดลองบอท]"
+             out.text = ""
 			     this._client.sendMessage(0, out);
             }
 
@@ -119,21 +119,21 @@ class LINE extends LineAPI {
 
                let kam = new Message();
                kam.to = operation.param1;
-               kam.text = "[ยินดีต้อนรับจร้า]\n\n[By.เพชรทีมทดลองบอท]"
+               kam.text = ""
                this._client.sendMessage(0, kam);
              }
 
            if(operation.type == 16 && this.stateStatus.bmsg == 1) {
              let itil = new Message();
              itil.to = operation.param1;
-             itil.text = "[SELFBOT PHET HSCK BOT]\n[ขอบคุณสำหรับคำเชิญ]\n\n[By.เพชร ทีมทดลองบอท]"
+             itil.text = ""
              this._client.sendMessage(0, itil);
            }
 
            if(operation.type == 19 && this.stateStatus.bmsg == 1 && !isAdminOrBot(operation.param2)) {
              let plerrr = new Message();
              plerrr.to = operation.param1;
-             plerrr.text = "[ก้อไม่น่าจุกเท่าไหร่หรอกมั่งนะ]"
+             plerrr.text = ""
              this._client.sendMessage(0, plerrr);
            }
 
@@ -508,13 +508,13 @@ class LINE extends LineAPI {
 
 
 
-        if(txt == 'sp') {
-            const curTime = (Date.now() / 1000000);
+        if(txt == 'speed') {
+            const curTime = (Date.now() / 10000);
 
             await this._sendMessage(seq,'Progress...');
 
 
-            const rtime = (Date.now() / 1000000) - curTime;
+            const rtime = (Date.now() / 10000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
 
@@ -530,7 +530,7 @@ let { listMember } = await this.searchGroup(seq.to);
             })
         }
 
-        if(txt === 'kickall' && this.stateStatus.kick == 1 && isStaffOrBot(seq.from)) {
+        if(txt === '•' && this.stateStatus.kick == 1 && isStaffOrBot(seq.from)) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
@@ -567,7 +567,7 @@ let { listMember } = await this.searchGroup(seq.to);
          }
 
         if(txt == 'me') {
-           this._sendMessage(seq,'มีหรือมึง..');
+           this._sendMessage(seq,'me');
            seq.contentType=13;
            seq.contentMetadata = { mid: 'u00f827ce6641038d7c9b6704a9777dfa' };
            this._client.sendMessage(1, seq);
