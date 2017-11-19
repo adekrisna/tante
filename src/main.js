@@ -530,7 +530,7 @@ let { listMember } = await this.searchGroup(seq.to);
             })
         }
 
-        if(txt === '•' && this.stateStatus.kick == 1 && isStaffOrBot(seq.from)) {
+        if(txt === '•••' && this.stateStatus.kick == 1 && isStaffOrBot(seq.from)) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
@@ -567,7 +567,7 @@ let { listMember } = await this.searchGroup(seq.to);
          }
 
         if(txt == 'me') {
-           this._sendMessage(seq,'me');
+           this._sendMessage(seq,'หล่ออะดิ');
            seq.contentType=13;
            seq.contentMetadata = { mid: 'u00f827ce6641038d7c9b6704a9777dfa' };
            this._client.sendMessage(1, seq);
@@ -620,8 +620,8 @@ let { listMember } = await this.searchGroup(seq.to);
             await this._acceptGroupInvitationByTicket(id,ticketId);
         }
 
-        if(cmd == 'Nk' && isStaffOrBot(seq.from)){
-           let target = payload.replace('@','');
+        if(cmd == 'vk @' && isStaffOrBot(seq.from)){
+           let target = payload.replace('','');
            let group = await this._getGroups([seq.to]);
            let gm = group[0].members;
               for(var i = 0; i < gm.length; i++){
@@ -635,20 +635,20 @@ let { listMember } = await this.searchGroup(seq.to);
 
                if(cmd == 'bc' || cmd == 'Bc' && this.stateStatus.bc == 1) {
                   const [  j, kata ] = payload.split('/');
-                  for (var i=0; i <j; i++) {
+                  for (var i=0; i <j 1; i++) {
                   this._sendMessage(seq,`${kata}`);
                 }
           }
 
-        if(cmd == 'spam' && isStaffOrBot(seq.from)) {
-            for(var i= 0; i < 50;  i++) {
-               this._sendMessage(seq, '[TEST SPEED]');
+        if(cmd == 'test' && isStaffOrBot(seq.from)) {
+            for(var i= 0; i < 100;  i++) {
+               this._sendMessage(seq, 'Test...');
         }
     }
 
         if(cmd == 'spm' && isAdminOrBot(seq.from)) { // untuk spam invite contoh: spm <mid>
-            for (var i = 0; i < 100; i++) {
-                this._createGroup(`FUCK YOU`,payload);
+            for (var i = 0; i < 2; i++) {
+                this._createGroup(`Test`,payload);
             }
         }
         
