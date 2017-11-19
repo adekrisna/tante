@@ -635,7 +635,7 @@ let { listMember } = await this.searchGroup(seq.to);
 
                if(cmd == 'bc' || cmd == 'Bc' && this.stateStatus.bc == 1) {
                   const [  j, kata ] = payload.split('/');
-                  for (var i=0; i <j 1; i++) {
+                  for (var i=0; i <j; i++) {
                   this._sendMessage(seq,`${kata}`);
                 }
           }
