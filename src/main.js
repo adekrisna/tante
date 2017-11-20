@@ -111,7 +111,7 @@ class LINE extends LineAPI {
              let out = new Message();
              out.to = operation.param1;
 
-             out.text = "ยินดีต้อนรับ\n\n[[By.เพชรทีมทดลองบอท]]"
+             out.text = "อ่าวออกไมอะ..."
 			     this._client.sendMessage(0, out);
             }
 
@@ -119,7 +119,7 @@ class LINE extends LineAPI {
 
                let kam = new Message();
                kam.to = operation.param1;
-               kam.text = "อ่าวออกไม่อะ"
+               kam.text = "ยินดีต้อนรับ\n\n[By.เพชร ทีมทดลองบอท]"
                this._client.sendMessage(0, kam);
              }
 
