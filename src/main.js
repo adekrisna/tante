@@ -111,7 +111,7 @@ class LINE extends LineAPI {
              let out = new Message();
              out.to = operation.param1;
 
-             out.text = ""
+             out.text = "ยินดีต้อนรับ\n\n[[By.เพชรทีมทดลองบอท]]"
 			     this._client.sendMessage(0, out);
             }
 
@@ -119,21 +119,21 @@ class LINE extends LineAPI {
 
                let kam = new Message();
                kam.to = operation.param1;
-               kam.text = ""
+               kam.text = "อ่าวออกไม่อะ"
                this._client.sendMessage(0, kam);
              }
 
            if(operation.type == 16 && this.stateStatus.bmsg == 1) {
              let itil = new Message();
              itil.to = operation.param1;
-             itil.text = ""
+             itil.text = "ก้อไม่น่าจุกเท่าไหร่..."
              this._client.sendMessage(0, itil);
            }
 
            if(operation.type == 19 && this.stateStatus.bmsg == 1 && !isAdminOrBot(operation.param2)) {
              let plerrr = new Message();
              plerrr.to = operation.param1;
-             plerrr.text = ""
+             plerrr.text = "SELFBOT PHET HACK BOT"
              this._client.sendMessage(0, plerrr);
            }
 
